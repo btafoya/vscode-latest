@@ -32,7 +32,7 @@
 
               buildInputs = oldAttrs.buildInputs ++ [ pkgs.krb5 ];
 
-              meta.mainProgram = "code-insiders";
+              meta.mainProgram = "code";
             });
           vscode-insiders = default;
         };
