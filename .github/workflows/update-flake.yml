@@ -24,7 +24,7 @@ jobs:
 
       - name: Update hash
         run: |
-          hash="$(nix-prefetch-url --unpack --name code-x64.tar.gz 'https://code.visualstudio.com/sha/download?&os=linux-x64')"
+          hash="$(nix-prefetch-url --unpack --name code-x64.tar.gz 'https://code.visualstudio.com/sha/download?build=stable&os=linux-x64')"
           sed -E -i 's/sha256 = "[^"]+"/sha256 = "'"$hash"'"/' flake.nix
 
       - name: Commit changes
